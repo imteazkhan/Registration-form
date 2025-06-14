@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #d39fda, #7195ad);
+            margin: 100;
+            padding: 0;
+        }
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            background-color: #f8f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(10, 10, 10, 0.466);
+        }
+        h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            font-size: 14px;
+            font-weight: bold;
+            display: block;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+        .form-group button {
+            background-color: #4CAF50;
+            justify-content: space-between;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .form-group button:hover {
+            background-color: #1b7a20;
+        }
+        .form-group .reset-button {
+            background-color: #f44336;
+        }
+        .form-group .reset-button:hover {
+            background-color: #b9100d;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Registration Form</h2>
+    <form action="student-registration-form" method="POST">
+        
+        <div class="form-group">
+            <label for="id">ID:</label>
+            <input type="text" id="id" name="id" required>
+        </div>
+
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <textarea id="name" name="name" rows="4" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="round">Round:</label>
+            <select id="round" name="round" required>
+                <option value="Round 1">Round 1</option>
+                <option value="Round 2">Round 2</option>
+                <option value="Round 3">Round 3</option>
+                <option value="Round 4">Round 4</option>
+                <option value="Round 5">Round 5</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <fieldset>
+                <legend>Gander</legend>
+            <!-- <label for="gender">Gender:</label> -->
+            <input type="radio" id="male" name="gender" value="Male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female" required>
+            <label for="female">Female</label>
+        </fieldset>
+        </div>
+
+        <div class="form-group">
+            <label for="education">Education Level:</label>
+            <input type="checkbox" id="ssc" name="education" value="S.S.C">
+            <label for="ssc">S.S.C</label>
+            <input type="checkbox" id="higherschool" name="education" value="Hiherschool">
+            <label for="hsc">H.S.C</label>
+            <!-- <input type="checkbox" id="graduate" name="education" value="Graduate">
+            <label for="graduate">Graduate</label> -->
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Submit</button>
+            <button type="reset" class="reset-button">Reset</button>
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>
